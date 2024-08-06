@@ -1,0 +1,73 @@
+{
+    "name": "Nostaw",
+    "short_name": "Nostaw",
+    "start_url": "/Nostaw/Index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": [
+      {
+        "src": "/Nostaw/Images/NostawIcon/Nostaw20.png",
+        "sizes": "20x20",
+        "type": "image/png"
+      },
+      {
+        "src": "/Nostaw/Images/NostawIcon/Nostaw29.png",
+        "sizes": "29x29",
+        "type": "image/png"
+      },
+   
+      {
+        "src": "/Nostaw/Images/NostawIcon/Nostaw40.png",
+        "sizes": "40x40",
+        "type": "image/png"
+      },
+      {
+        "src": "/Nostaw/Images/NostawIcon/Nostaw58.png",
+        "sizes": "58x58",
+        "type": "image/png"
+      },
+      {
+        "src": "/Nostaw/Images/NostawIcon/Nostaw60.png",
+        "sizes": "60x60",
+        "type": "image/png"
+      },
+      {
+        "src": "/Nostaw/Images/NostawIcon/Nostaw76.png",
+        "sizes": "76x76",
+        "type": "image/png"
+      },
+      {
+        "src": "/Nostaw/Images/NostawIcon/Nostaw80.png",
+        "sizes": "80x80",
+        "type": "image/png"
+      },
+      {
+        "src": "/Nostaw/Images/NostawIcon/Nostaw87.png",
+        "sizes": "87x87",
+        "type": "image/png"
+      }, {
+        "src": "/Nostaw/Images/NostawIcon/Nostaw120.png",
+        "sizes": "120x120",
+        "type": "image/png"
+      },
+      {
+        "src": "/Nostaw/Images/NostawIcon/Nostaw180.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      }, {
+        "src": "/Nostaw/Images/NostawIcon/Nostaw512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }, {
+        "src": "/Nostaw/Images/NostawIcon/Nostaw1024.png",
+        "sizes": "1024x1024",
+        "type": "image/png"
+      }, {
+        "src": "/Nostaw/Images/NostawIcon/Nostaw1536.png",
+        "sizes": "1536x1536",
+        "type": "image/png"
+      }
+   
+    ]
+  }

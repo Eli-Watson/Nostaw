@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Index</title>
+    <script src="/Nostaw/JS/Nav.js"></script>
+    <script src="/Nostaw/JS/Article.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Article Index</h1>
+    </header>
+    
+<div id="Nav"></div>
+    <section>
+        <button class="sidenav-toggle">☰ Menu</button>
+        <div id="article-container">
+            <h2 id="article-title"></h2>
+            <p id="article-description"></p>
+            <a id="article-link" target="_blank">Read more</a>
+        </div>
+    
+    </section>
+<div id="Footer"></div>
+</body>
+</html>
+<script src="/Retro/JS/Article.js"></script>
+
+<style>
+    /* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header {
+        background-color: #333;
+        color: white;
+        padding: 1em;
+        text-align: center;
+    }
+
+    section {
+        padding: 1em;
+    }
+
+    #article-container {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 1em;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    #article-title {
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+    }
+
+    #article-description {
+        font-size: 1em;
+        margin-bottom: 1em;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1em;
+    }
+
+    /* Mobile Styles */
+    @media only screen and (max-width: 600px) {
+        header {
+            font-size: 1.2em;
+        }
+
+        #article-container {
+            padding: 0.5em;
+        }
+
+        #article-title {
+            font-size: 1.2em;
+        }
+
+        #article-description {
+            font-size: 0.9em;
+        }
+
+        footer {
+            font-size: 0.9em;
+        }
+    }
+
+    /* Additional Styles */
+    #Nav, #Footer {
+        padding: 1em;
+        background-color: #f4f4f4;
+    }
+    nav.sidenav {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+nav.sidenav a {
+    display: block;
+    color: white;
+    padding: 1em;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+}
+
+nav.sidenav a:hover {
+    background-color: #575757;
+}
+
+.sidenav.open {
+    transform: translateX(0);
+}
+
+.sidenav-toggle {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+    nav.sidenav {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .sidenav-toggle {
+        display: block;
+    }
+}
+</style>
