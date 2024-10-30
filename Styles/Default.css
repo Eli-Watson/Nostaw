@@ -1,6 +1,9 @@
 body {
     color: #000;    
 }
+header {
+    text-align: center;
+}
 
 .flex-container {
     display: flex;
@@ -16,6 +19,8 @@ body {
     border-style: solid;
     padding: 5px;
     margin: 10px;
+    width: 300px;
+    height: 100px;
 
 }
 

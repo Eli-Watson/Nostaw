@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             document.getElementById('Footer').innerHTML = data;
         });
- document.querySelector('.sidenav-toggle').addEventListener('click', function() {
+            document.querySelector('.sidenav-toggle').addEventListener('click', function() {
             document.querySelector('.sidenav').classList.toggle('open');
         });       
     });
