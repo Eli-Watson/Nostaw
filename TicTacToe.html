@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>TicTacToe</title>
+        <!-- <script type="module" src="./Scripts/Flamethrower.js"></script> -->
+        <script type="module" src="./Scripts/Background.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a href="./" target="_self">Home</a>
+        <canvas></canvas>
+        <div id="TicTacToe">
+            <section>
+                <div id="board" class="board">
+                    <div class="cell" onclick="makeMove(0)"></div>
+                    <div class="cell" onclick="makeMove(1)"></div>
+                    <div class="cell" onclick="makeMove(2)"></div>
+                    <div class="cell" onclick="makeMove(3)"></div>
+                    <div class="cell" onclick="makeMove(4)"></div>
+                    <div class="cell" onclick="makeMove(5)"></div>
+                    <div class="cell" onclick="makeMove(6)"></div>
+                    <div class="cell" onclick="makeMove(7)"></div>
+                    <div class="cell" onclick="makeMove(8)"></div>
+                </div>
+                <button onclick="resetGame()">Reset</button>
+                <script src="/Home/JS/Games/TicTacToe.js"></script>
+            </section>
+        </div>
+    </body>
+</html>
+<style>
+   canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+  }
+   
+   body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   /*  height: 100vh; /* 100% of the viewport height */
+    margin: 0;
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin-bottom: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+button {
+    font-size: 18px;
+}
+</style>
