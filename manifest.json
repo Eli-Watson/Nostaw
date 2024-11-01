@@ -1,7 +1,7 @@
 {
     "name": "Nostaw",
     "short_name": "Nostaw",
-    "start_url": "./index.html",
+    "start_url": "/Nostaw/index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
