@@ -10,24 +10,26 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./Images/NostawIcon/Nostaw180.png">
     <link rel="manifest" href="/Nostaw/manifest.json">
     <link rel="icon" type="image/x-icon" href="./Images/NostawIcon/Nostaw20.png">
-    <!-- <script type="module" src="./Scripts/Flamethrower.js"></script> -->
+    <script type="module" src="./Scripts/Flamethrower.js"></script>
     <link rel="stylesheet" href="./Styles/Default.css">
     <title>Nostaw</title>
  
 </head>
 <body>
-   <script type="module" src="./Scripts/Background.js"></script>
-         
-   </div>
-   <canvas></canvas>
-   <header>
+    <div id="Scripts">
+    <script type="module" src="./Scripts/Background.js"></script>
+    </div>
+   
+    <canvas></canvas>
+   
+    <header>
     <h1>Nostaw</h1>
    </header>
    
    <div class="flex-container">
         <div id="TicTacToe" class="flex-item">
             <h2>TicTacToe</h2> 
-            <a href="./TicTacToe.html" target="_self">TicTacToe</a>
+            <button onclick="location.href='./TicTacToe.html'">Play</button>
         </div>
         <div id="Hangman" class="flex-item">
             <h2>Hangman</h2>
@@ -67,5 +69,7 @@
 </body>
 </html> 
 
-    <!-- <button class="sidenav-toggle">☰ Menu</button>
-    <div id="Nav"></div> -->
+<!-- <button class="sidenav-toggle">☰ Menu</button> 
+    <div id="Nav">
+        <p>testing</p>
+    </div> -->

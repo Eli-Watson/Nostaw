@@ -1,5 +1,6 @@
 import flamethrower from 'https://cdn.jsdelivr.net/npm/flamethrower-router@0.0.0-meme.12/dist/main.min.js';
-const router = flamethrower({ prefetch: 'visible', log: true, pageTransitions: false });
+// const router = flamethrower({ prefetch: 'visible', log: true, pageTransitions: false });
+import { render } from './Background.js';
 
 // Nav Controls
 if (document.querySelector('.sidenav-toggle') == true) {
@@ -9,5 +10,3 @@ if (document.querySelector('.sidenav-toggle') == true) {
 } else {
     console.log('No nav Toggle Buttom')
 }
-
-   
