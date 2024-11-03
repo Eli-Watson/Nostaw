@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Nostaw">
+        <link rel="apple-touch-icon" sizes="120x120" href="../Images/NostawIcon/Nostaw120.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../Images/NostawIcon/Nostaw180.png">
+        <link rel="manifest" href="/Nostaw/manifest.json">
+        <link rel="icon" type="image/x-icon" href="../Images/NostawIcon/Nostaw20.png">
+        <script type="module" src="../Scripts/Flamethrower.js"></script>
+        <title>Hangman</title>
+    </head>
+    <body>
+        <canvas></canvas>
+        <button id="backButton" onclick="location.href='../'">Back</button>
+        <div id="Scripts">
+            <script type="module" src="../Scripts/Background.js"></script>
+            <script src="/Home/JS/Games/Hangman.js"></script>
+        </div>
+        <div class="hangman-container">
+            <h2>Hangman Game</h2>
+            <div id="wordInput">
+                <label for="wordToGuessInput">Enter a word or phrase for the player to guess:</label>
+                <input type="text" id="wordToGuessInput">
+                <button onclick="startGame()">Start Game</button>
+            </div>
+    
+            <div id="game" style="display: none;">
+                <div id="turnDisplay"></div>
+                <div id="wordToGuess" class="word-display"></div>
+                <div id="wrongLetters"></div>
+                <div id="guessResult"></div>
+                <div id="letterInput" class="letter-input">
+                    <label for="letterInputField">Guess a letter:</label>
+                    <input type="text" id="letterInputField" maxlength="1" required>
+                    <button onclick="guessLetter()">Guess</button>
+                </div>
+                <div class="hangman">
+                    <div id="hangman"></div>
+                    <div id="result"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<style>
+canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+  }
+#backButton{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+.hangman-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    text-align: center;
+    margin: 0 auto; /* Center container */
+}
+
+.hangman {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.hangman svg {
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.letter-input {
+    margin-top: 10px;
+}
+
+.word-display {
+    font-size: 1.5em;
+    font-weight: bold;
+    white-space: pre-wrap; /* Preserve whitespace and wrap */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.word-display .letter {
+    display: inline-block;
+    margin-right: 0.3em; /* Adjust letter spacing */
+}
+
+.word-display span {
+    margin-right: 0.5em; /* Adjust spacing between words */
+}
+
+</style>

@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Nostaw">
+        <link rel="apple-touch-icon" sizes="120x120" href="../Images/NostawIcon/Nostaw120.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../Images/NostawIcon/Nostaw180.png">
+        <link rel="manifest" href="/Nostaw/manifest.json">
+        <link rel="icon" type="image/x-icon" href="../Images/NostawIcon/Nostaw20.png">
+        <script type="module" src="../Scripts/Flamethrower.js"></script>
+        <title>TicTacToe</title>
+    </head>
+    <body>
+        <canvas></canvas>
+        <button id="backButton" onclick="location.href='../'">Back</button>
+        <div id="Scripts">
+            <script type="module" src="../Scripts/Background.js"></script>
+            <script src="/Home/JS/Games/TicTacToe.js"></script>
+        </div>
+        <header>
+            <h2>TicTacToe</h2>
+        </header>
+        <div id="TicTacToe">
+            <div id="board" class="board">
+                <div class="cell" onclick="makeMove(0)"></div>
+                <div class="cell" onclick="makeMove(1)"></div>
+                <div class="cell" onclick="makeMove(2)"></div>
+                <div class="cell" onclick="makeMove(3)"></div>
+                <div class="cell" onclick="makeMove(4)"></div>
+                <div class="cell" onclick="makeMove(5)"></div>
+                <div class="cell" onclick="makeMove(6)"></div>
+                <div class="cell" onclick="makeMove(7)"></div>
+                <div class="cell" onclick="makeMove(8)"></div>
+            </div>
+            <button onclick="resetGame()">Reset</button>
+        </div>
+    </body>
+</html>
+<style>
+canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+  }
+#backButton{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+body {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   /*  height: 100vh; /* 100% of the viewport height */
+    margin: 0;
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+button {
+    font-size: 18px;
+}
+</style>

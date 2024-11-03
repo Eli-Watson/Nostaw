@@ -1,0 +1,12 @@
+:root {
+    --accent-color: red;
+    --header-color: red; /* will proabbly not be implemnented for this site */
+    --text-color: black;
+    --background-color: white;
+    --text-size: 12px;
+}
+body {
+    color: var(--text-color);
+    font-size: var(--text-size);
+    background-color: var(--background-color);
+}

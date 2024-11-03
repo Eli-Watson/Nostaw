@@ -1,10 +1,20 @@
+:root {
+    --accent-color: red;
+    --header-color: red; /* will proabbly not be implemnented for this site */
+    --text-color: white;
+    --background-color: black;
+}
 body {
     color: white;    
 }
 header {
     text-align: center;
 }
-
+#backButton{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
 canvas {
     width: 100vw;
     height: 100vh;
