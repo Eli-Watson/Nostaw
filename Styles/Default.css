@@ -5,10 +5,11 @@
     --background-color: black;
 }
 body {
-    color: white;    
+    color: black;    
 }
 header {
     text-align: center;
+    color: white;
 }
 #backButton{
     position: absolute;
@@ -34,7 +35,7 @@ canvas {
 }
 
 .flex-item{
-    border-color:white;
+    border-color: black;
     border-width: 2px;
     border-style: solid;
     padding: 5px;
@@ -42,7 +43,7 @@ canvas {
     width: 300px;
     height: 100px;
     text-align: center;
-    background-color: black;
+    background-color: white;
 }
 
 .flex-item button {

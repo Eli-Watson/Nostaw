@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Nostaw">
+    <link rel="apple-touch-icon" sizes="120x120" href="./Images/NostawIcon/Nostaw120.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Images/NostawIcon/Nostaw180.png">
+    <link rel="manifest" href="/Nostaw/manifest.json">
+    <link rel="icon" type="image/x-icon" href="./Images/NostawIcon/Nostaw20.png">
+    <script type="module" src="./Scripts/Flamethrower.js"></script>
+    <title>Holiday Tracker</title>
+ 
+</head>
+<body>
+    <div id="Scripts">
+        <script src="/Home/JS/Holiday.js"></script>
+        <script src="/Home/JS/DailyWord.js"></script>
+        <script src="/Home/JS/Thought.js"></script>
+        <script type="module" src="../Scripts/Background.js"></script>
+    </div>
+    <canvas></canvas>
+    <button id="backButton" onclick="location.href='../'">Back</button>
+    <div class="flex-container">
+        <div id="holidayInfo" class="flex-item">
+            <p>Loading...</p>
+        </div>
+        <div class="flex-item">
+            <h1 class ="wordH">Word of the Day:</h1>
+            <div id="word" class="word"></div>
+            <p id="definition" class ="wordp"></p>
+        </div>
+        <div id="thought-container" class="flex-item">
+            <h1 class="thoughtsH">Shower Thought of the Day</h1>
+            <p id="thought-text" class="thoughtsP">Loading thought...</p>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+#backButton {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flex-item {
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    padding: 5px;
+    margin: 10px;
+    width: 320px;
+    text-align: center;
+    background-color: white;
+}
+body {
+    color: black;
+}
+.HolidayText {
+    color: black;
+}
+.Slogan {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.HolidayName {
+    color: red; /* Dynamic accent color */
+}
+
+.HolidayMessage {
+    font-style: italic;
+    color: #333;
+    margin-top: 15px;
+}
+
+.DaysUntil {
+    color: red; /* Dynamic accent color */
+    font-weight: bold;
+}
+.word {
+    font-size: 1.5em;
+    color: red; /* Dynamic accent color */
+    font-weight: bold;
+}
+
+.wordH {
+    color: black;
+}
+
+.wordp {
+    color: black;
+    font-style: italic;
+}
+.thoughtsH {
+    color: black;
+}
+
+.thoughtsP {
+    color: black;
+    font-style: italic;
+}
+</style>

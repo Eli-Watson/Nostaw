@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Nostaw">
+        <link rel="apple-touch-icon" sizes="120x120" href="../Images/NostawIcon/Nostaw120.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../Images/NostawIcon/Nostaw180.png">
+        <link rel="manifest" href="/Nostaw/manifest.json">
+        <link rel="icon" type="image/x-icon" href="../Images/NostawIcon/Nostaw20.png">
+        <script type="module" src="../Scripts/Flamethrower.js"></script>
+        <title>Madlib</title>
+    </head>
+<body>
+    <div id="Scripts">
+        <script type="module" src="../Scripts/Background.js"></script>
+        <script src="/Demos/MadLib/MadLib.js"></script>
+    </div>
+    <canvas></canvas>
+    <button id="backButton" onclick="location.href='../'">Back</button>
+    <div id="app">
+        <h1>Mad-Lib Generator</h1>
+        <h3>A Code Demo by Eli Watson</h3>
+        <p>This is a JS program to generate a Mad-Lib with 126.75 quintillion Different Possible Combinations!</p>
+       
+        <button onclick="displayMadlib()">New Mad Lib</button>
+    </div>
+    <div id="madLib-Container">
+        <div id="madLib"></div>
+    </div> 
+    
+  </body>
+</html>
+<style>
+#backButton {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+}
+body {
+    background-color: white;
+}
+#app {
+    text-align: center;
+    background-color: white;
+}
+#madLib-Container {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: white;
+}
+#madLib {
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    max-width: 1200px;
+}
+</style>
