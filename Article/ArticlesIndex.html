@@ -1,31 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Nostaw">
-    <link rel="apple-touch-icon" sizes="120x120" href="./Images/NostawIcon/Nostaw120.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./Images/NostawIcon/Nostaw180.png">
-    <link rel="manifest" href="/Nostaw/manifest.json">
-    <link rel="icon" type="image/x-icon" href="./Images/NostawIcon/Nostaw20.png">
-    <script type="module" src="./Scripts/Flamethrower.js"></script>
-    <title>Article Index</title>
- </head>
-<body>
-    <div id="Scripts">
-        <script type="module" src="../Scripts/Background.js"></script>
-        <script src="/Retro/JS/Nav.js"></script>
-        <script src="/Retro/JS/ArticleRSS.js"></script>
-    </div>
-    <header>
-        <h1>Article Index</h1>
-    </header>
-    <div id="rss-container">
-        <ul id="rss-list"></ul>
-    </div> 
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Nostaw">
+        <link rel="apple-touch-icon" sizes="120x120" href="./Images/NostawIcon/Nostaw120.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./Images/NostawIcon/Nostaw180.png">
+        <link rel="manifest" href="/Nostaw/manifest.json">
+        <link rel="icon" type="image/x-icon" href="./Images/NostawIcon/Nostaw20.png">
+        <script type="module" src="../Scripts/Flamethrower.js"></script>
+        <title>Article Index</title>
+    </head>
+    <body>
+        <canvas></canvas>
+    
+        <button id="backButton" onclick="location.href='../'">Back</button>
+    
+        <div id="Scripts">
+            <script type="module" src="../Scripts/Background.js"></script>
+            <script src="../Scripts/RSS/ArticleRSS.js"></script>
+            <script src="../Scripts/RSS/PostRSS.js"></script>
+        </div>
+    
+        <div class="flex-container">
+            <div id="Article-Container" class="flex-item">
+                <h1>Articles</h1>
+                <div id="rss-container">
+                    <ul id="rss-list"></ul>
+                </div> 
+            </div>
+            
+            <div id="Post-Container" class="flex-item">
+                <h1>Posts</h1>
+                <div id="rss-container">
+                    <ul id="rss-list-post"></ul>
+                </div>
+            </div>
+        </div>
+
+    </body>
 </html>
 <style>
-   
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flex-item {
+    width: 90%;
+    background-color: white;
+}
+.flex-item h1{
+    text-align: center;
+}
+#backButton{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+  }
+</style>

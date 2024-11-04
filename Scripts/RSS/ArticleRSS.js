@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const listItem = document.createElement('li');
                 listItem.innerHTML = `<strong>${new Date(pubDate).toLocaleDateString()}</strong> - ${title}`;
                 listItem.addEventListener('click', () => {
-                    window.location.href = `/Retro/Articles.html?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&link=${encodeURIComponent(link)}`;
+                    window.location.href = `/Nostaw/Article/Articles.html?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&link=${encodeURIComponent(link)}`;
                 });
 
                 rssList.appendChild(listItem);

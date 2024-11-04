@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const rssUrl = 'https://eli-watson.github.io/posts/index.xml'; // Replace with your RSS feed URL
-    const rssList = document.getElementById('rss-list');
+    const rssList = document.getElementById('rss-list-post');
 
     fetch(rssUrl)
         .then(response => response.text())
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const listItem = document.createElement('li');
                 listItem.innerHTML = `<strong>${new Date(pubDate).toLocaleDateString()}</strong> - ${title}`;
                 listItem.addEventListener('click', () => {
-                    window.location.href = `/Retro/Posts.html?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&link=${encodeURIComponent(link)}`;
+                    window.location.href = `/Nostaw/Article/Posts.html?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&link=${encodeURIComponent(link)}`;
                 });
 
                 rssList.appendChild(listItem);

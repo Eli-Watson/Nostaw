@@ -35,7 +35,7 @@ canvas {
 }
 
 .flex-item{
-    border-color: black;
+    border-color: red;
     border-width: 2px;
     border-style: solid;
     padding: 5px;
