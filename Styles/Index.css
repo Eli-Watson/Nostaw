@@ -17,10 +17,25 @@ header {
     top: 5px;
 }
 
+#editingModeButton {
+   color: black;
+}
+
+#editing {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    
+}
+#editing button {
+    border-radius: 3px;
+}
+
 #Menu-Button{
     position: absolute;
     left: 5px;
     top: 5px;
+    border-radius: 3px;
 }
 canvas {
     width: 100vw;
