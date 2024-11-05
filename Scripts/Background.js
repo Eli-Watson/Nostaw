@@ -8,7 +8,9 @@ var camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
 
 var canvas = document.querySelector("canvas");
 var renderer = new THREE.WebGLRenderer({canvas: canvas});
-renderer.setClearColor(0x000000);
+renderer.setClearColor(bgColor);
+var bgColor = 0x000000 //var so it can be changed
+
 // First Cube
 var cubeGeometry = new THREE.CubeGeometry(1, 1, 1);
 var cubeMaterial = new THREE.MeshBasicMaterial({color: 0xff0000, wireframe: true,}); // red

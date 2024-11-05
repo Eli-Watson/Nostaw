@@ -10,4 +10,3 @@ if (document.querySelector('.sidenav-toggle') == true) {
     console.log('No nav Toggle Buttom')
 }
 
-// Color Controls

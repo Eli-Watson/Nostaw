@@ -11,14 +11,14 @@
     <link rel="manifest" href="/Nostaw/manifest.json">
     <link rel="icon" type="image/x-icon" href="./Images/NostawIcon/Nostaw20.png">
     <script type="module" src="./Scripts/Flamethrower.js"></script>
-    <link rel="stylesheet" href="./Styles/Default.css">
+    <link rel="stylesheet" href="./Styles/Index.css">
     <title>Nostaw</title>
  
 </head>
 <body>
     <div id="Scripts">
-    <script type="module" src="./Scripts/Background.js"></script>
-    <script src="./Scripts/Dragable.js"></script>
+        <script type="module" src="./Scripts/Background.js"></script>
+        <script src="./Scripts/Dragable.js"></script>
     </div>
    
     <canvas></canvas>
@@ -26,11 +26,36 @@
     <header>
     <h1>Nostaw</h1>
     </header>
-   
-   <div class="flex-container">
+    
+    <button id="Menu-Button" onclick="Menu.showModal()">☰ About</button>
+    
+    <dialog id="Menu">
+        <h2>About:</h2>
+        <p>This is is a WIP IOS web app adaptation of my main site developed mobile-first. The main site works on mobile but this one is better. Also the design took insparation from Neal.fun.</p>
+        
+        <h2>Tech Used?</h2>
+        <p>For the Background? A basic three.js script, it's just two diffrent cubes rotating. Look at the repo for more details.</p> 
+        <a href="https://github.com/Eli-Watson/Nostaw/blob/main/Scripts/Background.js">~Or Click Here~</a>
+        
+        <h2>Where is the main site?</h2>
+        <a href="/Home/">Here</a> <a href="/Retro/">The Retro Version Here:</a> 
+        <p>Retro version is kinda outdated</p>
+        
+        <h2>Why no user-cusomization?</h2>
+        <p>Cause i'm a JS noob and its hard. ¯\_(ツ)_/¯</p>
+        
+        <p>So yeah... Have fun while you're here I reckon.</p>
+        <button id="Menu-Button" onclick="Menu.close()">X</button>
+    </dialog>
+    
+    <div class="flex-container">
          <div id="Holiday" class="flex-item" draggable="true">
             <h2>Holiday tracker</h2>
             <button onclick="location.href='./Pages/Holiday.html'">Holiday</button>
+        </div>
+         <div id="Articles" class="flex-item" draggable="true">
+            <h2>Articles/Posts</h2>
+            <button onclick="location.href='./Article/ArticlesIndex.html'">Articles/Posts</button>
         </div>
         <div id="TicTacToe" class="flex-item" draggable="true">
             <h2>TicTacToe</h2> 
@@ -46,13 +71,12 @@
         </div>
         <div id="BasicCraft" class="flex-item" draggable="true">
             <h2>BasicCraft</h2>
-            <button onclick="location.href='./Pages/BasicCraft.html'">BasicCraft</button>
+            <button onclick="location.href='/BasicCraft/'">BasicCraft</button>
         </div>
-        <div id="Articles" class="flex-item" draggable="true">
-            <h2>Articles/Posts</h2>
-            <button onclick="location.href='./Article/ArticlesIndex.html'">Articles/Posts</button>
+       <!-- <div id="#" class="flex-item" draggable="true">
+            <h2>#</h2>
         </div>
-       
+
         <div id="#" class="flex-item" draggable="true">
             <h2>#</h2>
         </div>
@@ -67,10 +91,7 @@
         </div>
         <div id="#" class="flex-item" draggable="true">
             <h2>#</h2>
-        </div>
-        <div id="#" class="flex-item" draggable="true">
-            <h2>#</h2>
-        </div>
+        </div> -->
    </div>
 </body>
 </html> 
