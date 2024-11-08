@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Nostaw">
+    <link rel="apple-touch-icon" sizes="120x120" href="../Images/NostawIcon/Nostaw120.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../Images/NostawIcon/Nostaw180.png">
+    <link rel="manifest" href="/Nostaw/manifest.json">
+    <link rel="icon" type="image/x-icon" href="../Images/NostawIcon/Nostaw20.png">
+    <script type="module" src="../Scripts/Flamethrower.js"></script>
+    <title>Text Editor</title>
+</head>
+<body>
+    <canvas></canvas>
+    <button id="backButton" onclick="location.href='../'">Back</button>
+    <script type="module" src="../Scripts/Background.js"></script>
+    <header>
+        <h1>Basic Text Editor</h1>
+    </header>
+    <div class="sample-toolbar">
+		<button id="boldButton" onclick="format('bold'); changeButtonColor('bold')">Bold</button>
+        <button id="italicButton" onclick="format('italic'); changeButtonColor('italic')">Italic</button>
+        <button id="listButton" onclick="format('insertunorderedlist'); changeButtonColor('list')">☰ List</button>
+    </div>
+    
+    <div class="editor" id="sampleeditor"></div>
+
+	<script>
+        // Function to toggle the color of the button when pressed, there is proabbly a better way to do this but this works...
+        function changeButtonColor(value){
+            switch(value){
+                case 'bold':
+                    button = document.getElementById('boldButton');
+                    if (button.style.backgroundColor === 'red') {
+                        button.style.backgroundColor = 'white';
+                        button.style.color = 'black';
+                    } else {
+                        button.style.backgroundColor = 'red';
+                        button.style.color = 'white';
+                    }
+                    break;
+                case 'italic':
+                    button = document.getElementById('italicButton');
+                    if (button.style.backgroundColor === 'red') {
+                        button.style.backgroundColor = 'white';
+                        button.style.color = 'black';
+                    } else {
+                        button.style.backgroundColor = 'red';
+                        button.style.color = 'white';
+                    }
+                    break;
+                //might remove this cause the behavior of the list button is not a toggle
+                case 'list':
+                    button = document.getElementById('listButton');
+                    if (button.style.backgroundColor === 'red') {
+                        button.style.backgroundColor = 'white';
+                        button.style.color = 'black';
+                    } else {
+                        button.style.backgroundColor = 'red';
+                        button.style.color = 'white';
+                    }
+                    break;
+            }
+        }
+
+        window.addEventListener('load', function(){
+			document.getElementById('sampleeditor').setAttribute('contenteditable', 'true');
+			// document.getElementById('sampleeditor2').setAttribute('contenteditable', 'true');
+        });
+
+		function format(command, value) {
+			document.execCommand(command, false, value);
+		}
+	</script>
+</body>
+</html>
+<style>
+    header {
+        text-align: center;
+        color: white;
+    }
+    canvas {
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -9999;
+    }
+    #backButton{
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        border-radius: 3px;
+    }
+    .editor{
+        border:solid 1px #ccc;
+        padding: 20px;
+        min-height:250px;
+        background-color: white;
+    }
+
+    .sample-toolbar{
+        border:solid 1px #ddd;
+        background:#f4f4f4;
+        padding: 5px;
+        border-radius:3px;
+    }
+
+    .sample-toolbar > span{
+        cursor:pointer;
+    }
+
+    .sample-toolbar > span:hover{
+        text-decoration:underline;
+    }
+</style>
